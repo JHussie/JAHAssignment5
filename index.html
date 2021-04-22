@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<style>
+#grid-container {           
+   width:100%;
+   height: 100%;
+   background: lightblue;
+   display: grid;
+   grid-template-columns: auto auto;
+}
+#grid-container > div {
+   Background:lightblue;
+}
+body {
+  font-family: 'Times New Roman', serif;
+  Background-color: lightblue;
+} 
+.roundbutton {
+    background-color: purple;
+    border: 1px #b0b0b0 outset;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    color: #ffffff;
+    text-align: center;
+    width: 70px;
+    font-size: 16px;
+}
+.title {
+   grid-row-start: 1;
+   grid-row-end: 1;
+} 
+.Intitle {
+   grid-row-start: 2;
+   grid-row-end: 2;
+}
+.Instructions {
+   grid-row-start: 3;
+   grid-row-end: 8;
+}
+.CSVlabel {
+   grid-row-start: 8;
+   grid-row-end: 8;
+}
+.CSVtext{
+   grid-row-start: 9;
+   grid-row-end: 30;
+}
+.Parsebutton{
+   grid-row-start:30;
+   grid-row-end: 30;
+}
+
+</style>
+</head> 
+<body> 
+<div id="grid-container">
+   <div class = "title" style="color:black; font-size:32px;">Assignment 5: CSV files & grids <br> </div>
+   <div class = "Intitle" style="color:black; font-size:24px;">Follow the directions below: <br> </div> 
+   <div class = "Instructions" style="color:black; font-size:16px;">1. Enter the contents of your CSV file into the text area.<br> 2. Click the Parse button.<br> 3. Once the grid is generated edit the grid if needed.<br> 4. Click the Save button and your new CSV layout will be shown within the text area. <br> </div>
+   <div class = "CSVlabel"><strong>CSV file <br> </strong></div>
+   <div class = "CSVtext"><textarea style="width=100%" id="csvfile" rows="20">""Last Name","First Name","Username","Student ID","Last Access","Availability","recitation0129"
+"Honter","Gred","dffg22@students.desu.edu","D10000001","2021-02-27 18:14:54","Yes","43.00"
+"Smith","Juan","qwer124@students.desu.edu","D10000002","2021-02-27 22:44:54","Yes","85.00"
+"</textarea></div>
+   <div class = "Parsebutton"><input class="roundbutton button" name="parsebb" type="button" value="Parse" onclick="parse(0)"></div>
+</div>
+</body> 
+</html>
